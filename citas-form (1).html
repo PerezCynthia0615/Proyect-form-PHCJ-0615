@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jua:wght@400;700&display=swap&quot; rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap&quot; rel="stylesheet">
+    <title>Ingreso de Citas </title>
+</head>
+<body>
+<header>
+    <h1>Ingreso de Citas - Consultorio SMILE</h1>
+    <img width="250" align="center" src="img.png">
+    <p> Rellene los datos solicitados para darle de alta en el sistema. ¡Gracias por confìar en SMILE! </p>
+</header>
+<main>
+    <div class="form-container">
+        <form action="altas.html" method="POST">
+            <div class="form-group">
+                <label>Paciente:</label>
+                <input type="text" name="Paciente" placeholder="Ej: Carlos Iker Martínez" required>
+            </div>
+            <div class="form-group">
+                <label>Tratamiento:</label>
+                <input type="text" name="Tratamiento" placeholder="Ej: Relleno de caries" required>
+            </div>
+            <div class="form-group">
+                <label>Fecha y Hora:</label>
+                <input type="datetime-local" name="Fecha y Hora" placeholder="Ej: 2026-02-20 13:00 AM" required>
+            </div>
+            <div class="form-group">
+                <label>Estado:</label>
+                <select name="Estado" id="estado" required>
+                        <option value="Completada">Completada</option>
+                        <option value="Cancelada">Cancelada</option>
+                        <option value="Confirmada">Confirmada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Medico:</label>
+                <input type="text" name="Medico" placeholder="Ej: Dr. Hernandez Espino" required>
+            </div>
+            <div class="form-group">
+                <label>Duración(min):</label>
+                <input type="number" name="Duración(min)" placeholder="Ej: 30" required>
+            </div>
+            <div class="form-group">
+                <label>Notas:</label>
+                <input type="text" name="Notas" placeholder="Ej: Tratamiento de caries" required>
+            </div>
+           <button type="submit" class="btn-submit">Ingresar nueva cita</button>
+        </form>
+    </div>
+
+    <a href="index.html" class="btn-back"> Volver al Inicio</a>
+</main>
+
+<footer>
+    <p>Perez Hinostroza Cynthia Jacqueline - Programación</p>
+    <p>24308051280615 - 4-I</p>
+</footer>
+
+</body>
+<style>
+    * {box-sizing: border-box;}
+    body {background-color: #133257;margin: 0;padding: 0;display: flex;flex-direction: column;align-items: center;min-height: 100vh;}
+    header {background-color: #79A8E2;width: 100%;padding: 20px 0;text-align: center;box-shadow: #79A8E2;}
+    h1 {color: #133257;margin: 0;font-size: 40px;}
+    main {display: flex;flex-direction: column;align-items: center;width: 100%;padding: 40px 20px;flex: 1;}
+    .form-container {max-width: 500px;width: 100%;background: #EAF1FA;padding: 35px;border-radius: 12px;box-shadow: 0 8px 24px rgba(245, 228, 242, 0.7);
+          border-top: 6px solid #1D4C86;}
+    .form-group {margin-bottom: 22px;}
+    label {display: block;margin-bottom: 8px;font-weight: 600;color: #133257;font-size: 14px;}
+    input[type="text"], input[type="number"], input[type="date"] {width: 100%;padding: 12px;border: 1px solid #e0d0dd;border-radius: 6px;
+              font-size: 14px;background-color: #C4D9F2;color: #133257;transition: all 0.3s ease;}
+    input:focus {outline: none;border-color: #EAF1FA;background-color: #79A8E2;box-shadow: 0 0 5px rgba(202, 158, 195, 0.4);}
+    .btn-submit {background-color: #1D4C86;color: #C4D9F2;border: none;padding: 14px 15px;width: 100%;border-radius: 6px;font-size: 16px;
+            cursor: pointer;transition: background-color 0.3s ease;margin-top: 10px;}
+    .btn-submit:hover {background-color: #b382ab;}
+    .btn-back {display: inline-block;text-align: center;margin-top: 25px;color:#EAF1FA;text-decoration:none;font-size:14px;font-weight:500;transition:color 0.3s ease;}
+    .btn-back:hover {color: #1D4C86;}
+    footer {width: 100%;background-color: #1D4C86;padding: 15px 0;text-align: center;font-size: 13px;color: #EAF1FA;}
+    footer p {margin: 4px 0;}
+</style>
+</html>
